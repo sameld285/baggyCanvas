@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Baggy Canvas Loading...</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
-        @font-face { 
-            font-family: xp; 
-            src: url('../testWebsite/text/xp.ttf'); 
-        }
         body {
             background-color: rgb(204, 204, 204);
             margin: 0;
@@ -28,7 +25,7 @@
             background-color: rgb(0, 99, 180);
             color: white;
             padding: 8px;
-            font-family: xp;
+            font-family: 'Press Start 2P', cursive;
             font-size: 20px;
             display: flex;
             justify-content: space-between;
@@ -55,13 +52,12 @@
         }
         .content {
             padding: 20px;
-            font-family: xp;
+            font-family: 'Press Start 2P', cursive;
             text-align: center;
         }
         h1 {
-            font-size: 60px;
+            font-size: 40px; /* Adjusted for better fit */
             color: #303030;
-            text-shadow: 1px 1px rgb(71, 71, 71);
             margin: 0;
             padding-top: 120px;
             justify-content: center;
@@ -87,7 +83,7 @@
             </div>
         </div>
         <div class="content">
-            <h1>coming soon<span class="dots" id="dots">.....</span></h1>
+            <h1>coming soon<span class="dots" id="dots">...</span></h1>
         </div>
     </div>
 
@@ -96,9 +92,9 @@
         let count = 0;
 
         setInterval(() => {
-            count = (count + 1) % 6; // Cycle through 0 to 3
+            count = (count + 1) % 4; // Cycle through 0 to 5
             dots.textContent = '.'.repeat(count); // Update dots
-        }, 650); // Change every 500ms
+        }, 650); // Change every 650ms
     </script>
 </body>
 </html>
