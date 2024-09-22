@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baggy Canvas Loading...</title>
+    <style>
+        @font-face { 
+            font-family: xp; 
+            src: url('xp.TTF'); 
+        }
+        body {
+            background-color: rgb(204, 204, 204);
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .window {
+            width: 600px;
+            height: 400px;
+            border: 2px solid #000;
+            background-color: rgb(235, 233, 221);
+            box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .title-bar {
+            background-color: rgb(0, 99, 180);
+            color: white;
+            padding: 8px;
+            font-family: xp;
+            font-size: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .title-bar .title {
+            font-weight: bold;
+        }
+        .title-bar .buttons {
+            display: flex;
+            gap: 4px;
+        }
+        .title-bar button {
+            width: 20px;
+            height: 16px;
+            border: none;
+            background-color: white;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .title-bar button:hover {
+            background-color: red;
+        }
+        .content {
+            padding: 20px;
+            font-family: xp;
+            text-align: center;
+        }
+        h1 {
+            font-size: 60px;
+            color: #303030;
+            text-shadow: 1px 1px rgb(71, 71, 71);
+            margin: 0;
+            padding-top: 120px;
+            justify-content: center;
+        }
+        h2 {
+            font-size: 20px;
+            color: #303030;
+            margin: 0;
+        }
+        .dots {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="window">
+        <div class="title-bar">
+            <span class="title">Baggy Canvas Media</span>
+            <div class="buttons">
+                <button>-</button>
+                <button>□</button>
+                <button>X</button>
+            </div>
+        </div>
+        <div class="content">
+            <h1>coming soon<span class="dots" id="dots">.....</span></h1>
+        </div>
+    </div>
+
+    <script>
+        const dots = document.getElementById('dots');
+        let count = 0;
+
+        setInterval(() => {
+            count = (count + 1) % 6; // Cycle through 0 to 3
+            dots.textContent = '.'.repeat(count); // Update dots
+        }, 650); // Change every 500ms
+    </script>
+</body>
+</html>
