@@ -75,11 +75,35 @@
         .dots {
             display: inline-block;
         }
+        .warning {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffcc00;
+  color: #333;
+  text-align: center;
+  padding: 10px;
+  z-index: 1000;
+}
     </style>
+    <script>
+    window.onload = function() {
+        if (window.innerWidth < 768) { // You can adjust the width as needed
+          document.getElementById('mobile-warning').style.display = 'block';
+        }
+      };
+    </script>
+
+      
 </head>
 <body>
     <div class="window">
         <div class="title-bar">
+            <div id="mobile-warning" class="warning">
+                This website is better viewed on a desktop for the best experience.
+              </div>
             <span class="title">Baggy Canvas Media</span>
             <div class="buttons">
                 <button>-</button>
